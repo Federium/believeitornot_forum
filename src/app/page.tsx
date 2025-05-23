@@ -12,9 +12,10 @@ export default async function Home() {
       <h1>strange forum</h1>
       <a href="/new-thread">Crea discussione</a>
       <ul>
-        {threads?.map(thread => (
-          <li key={thread.id}>
-            <a href={`/thread/${thread.id}`}>{thread.title}</a>
+        {threads?.map(threads => (
+          <li key={threads.id}>
+            <a href={`/new-thread/${threads.id}`}>{threads.title}</a>
+            <a href={`/new-thread/${threads.date}`}> ---- [{threads.date}]</a>
           </li>
         ))}
       </ul>
